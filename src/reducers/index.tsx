@@ -8,3 +8,4 @@ const rootReducer = combineReducers({
 }); //reducer 합치기 
 
 export default rootReducer;
+export type RootState = ReturnType<typeof rootReducer>; //useSelector state에 제공

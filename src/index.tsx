@@ -13,13 +13,6 @@ const root = ReactDOM.createRoot(
 // redux store 생성
 const store = createStore(rootReducer);
 
-// state를 rasie하여 store에 잘 들어갔는지 check
-store.dispatch({
-  type:'ADD_TODO',
-  text: 'Use Redux'
-}) 
-console.log('store.getState()',store.getState());
-
 const render = () => root.render(
   <React.StrictMode>
     <Provider store={store}>
