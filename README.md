@@ -24,3 +24,13 @@ npm install react-redux --save
 ```
 
 `package.json` 파일을 통해 해당 라이브러리가 설치됐는지 확인합니다.
+
+## Redux Middleware
+
+Dispatch가 action을 전달하고 Reducer에 도달하는 순간 사전에 지정된 작업을 실행할 수 있게하는 중간자 역할을 수행합니다.
+
+즉 Redux Store의 문지기 역할을 이 **Redux Middleware**가 수행한다고 볼 수 있습니다.
+
+`action`인자를 Middleware의 `next`로 넘겨서 Reducer에 도달하는 구조입니다.
+
+![2023-03-09 16;43;43](https://user-images.githubusercontent.com/90133704/223954269-4752b0fe-d7c6-4a5e-a6c5-8f08a3b49a96.PNG)
