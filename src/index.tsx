@@ -5,6 +5,7 @@ import App from './App';
 import { applyMiddleware, createStore } from 'redux';
 import rootReducer from './reducers';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -16,7 +17,7 @@ const loggerMiddleware = (store:any) => (next:any) => (action:any) => {
   console.log("action",action)
   next(action);
 }
-const middleware = applyMiddleware(loggerMiddleware); //여러개의 미들웨어를 받을 수 있으며 순차적으로 진행
+const middleware = applyMiddleware(thunk,loggerMiddleware); //여러개의 미들웨어를 받을 수 있으며 순차적으로 진행
 
 // redux store 생성(+middleware 등록)
 const store = createStore(rootReducer,middleware);

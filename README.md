@@ -34,3 +34,20 @@ Dispatch가 action을 전달하고 Reducer에 도달하는 순간 사전에 지�
 `action`인자를 Middleware의 `next`로 넘겨서 Reducer에 도달하는 구조입니다.
 
 ![2023-03-09 16;43;43](https://user-images.githubusercontent.com/90133704/223954269-4752b0fe-d7c6-4a5e-a6c5-8f08a3b49a96.PNG)
+
+## Redux Thunk Middleware
+
+**비동기 작업**을 할때 많이 사용하는 방법 중 하나인 미들웨어입니다.
+즉 dispatch 함수는 보통 매개변수로 객체를 action으로 state를 raise하는데, 함수로 state를 raise하기 위해서 **redux-thunk**가 필요합니다.
+
+다음 CLI 명령어로 redux-thunk 라이브러리를 설치합니다.
+
+```bash
+npm install redux-thunk --save
+```
+
+설치 후, `applyMiddleware`에 thunk를 선언합니다.
+
+### Redux Thunk를 적용한 미들웨어에서의 Data Flow
+
+![2023-03-09 18;02;07](https://user-images.githubusercontent.com/90133704/223972537-baddb8ec-749e-4bd1-ba9e-6b70843f74ee.PNG)
