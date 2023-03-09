@@ -51,3 +51,46 @@ npm install redux-thunk --save
 ### Redux Thunk를 적용한 미들웨어에서의 Data Flow
 
 ![2023-03-09 18;02;07](https://user-images.githubusercontent.com/90133704/223972537-baddb8ec-749e-4bd1-ba9e-6b70843f74ee.PNG)
+
+## Redux Toolkit
+
+Redux 로직을 작성하기 위한 공식 권장 접근 방식으로서, React CRA 패키지와 같이 Redux 앱을 빌드하는데 필수적인 패키지들이 설치되어 있습니다.
+
+다음 CLI 명령어로 Redux Toolkit을 생성할 수 있습니다.
+
+```bash
+npm install @reduxjs/toolkit react-redux
+```
+
+### 사용 순서
+
+1.`configureStore`를 사용하여 Redux Store 생성
+
+```jsx
+import { configureStore } from "@reduxjs/toolkit";
+
+export const store = configureStore({
+  reducer: {},
+});
+```
+
+2.React 컴포넌트에 Redux Store 제공 순서
+
+`<Provider store={store}>`로 전달합니다.
+
+3.`createSlice`로 Redux slice reducer 생성
+
+```jsx
+export const counterSlice = createSlice({
+  name: "",
+  initialState,
+  reducers: {
+    //state functions
+  },
+});
+```
+
+4.`useSelector`, `useDispatch`로 데이터 읽고 state raise하기
+
+- `useSelector`로 store에서 데이터를 읽어줍니다.
+- `useDispatch`로 dispatch함수를 가져오고 필요에 따라 action을 dispatch합니다.
