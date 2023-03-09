@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 type Props = {
-  value: number;
+  value: any;
   onIncrement: () => void;
   onDecrement: () => void;
 }
@@ -10,7 +10,7 @@ type Props = {
 function App({value,onIncrement,onDecrement}:Props) {
   return (
     <div className="App">
-      Checked : {value} times
+      {/* Checked : {value} times */}
       {' '}
       <button onClick={onIncrement}>+</button>
       {' '}

@@ -9,3 +9,5 @@
 - Redux Store: 애플리케이션의 전체 상태 트리를 보유합니다.
 - Reducer: 업데이트 된 상태를 반환하는 function입니다.
 - Dispatch: Dispatch는 reducer 함수에 Action을 raise하게 만듭니다.
+
+Redux Store는 반드시 1개만 존재해야 한다. 하지만 그 내부에 reducer함수는 여러개 생성할 수 있습니다. (combineReducers)
